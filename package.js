@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'jaymc:google-reverse-geocode',
-  version: '0.0.4',
-  summary: 'Calls Googles reverse geocode API converting GPS lat and lng to physical address',
-  git: 'https://github.com/JayMc/meteor-google-reverse-geocode',
+  name: 'gorgekara:google-nearby',
+  version: '0.0.1',
+  summary: 'Calls Google Nearby API',
+  git: 'https://github.com/gorgekara/meteor-google-nearby',
   documentation: 'README.md'
 });
 
@@ -11,12 +11,12 @@ Package.onUse(function(api) {
   api.use([
     'http'
   ]);
-  api.addFiles('google-reverse-geocode.js');
-  api.export('reverseGeocode', 'client')
+  api.addFiles('google_nearby.js');
+  api.export('nearby', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('jaymc:google-reverse-geocode');
-  api.addFiles('google-reverse-geocode-tests.js');
+  api.use('gorgekara:google-nearby');
+  api.addFiles('google_nearby.test.js');
 });
