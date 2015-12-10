@@ -6,6 +6,10 @@ nearby = {
 		var url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/' + (options.output || 'json'),
 				places = undefined;
 
+		if (!this.API) {
+			console.log('Please set API key by using nearby.setKey("API_KEY").');
+		}
+
 		url += '?location=' + options.lat + ',' + options.lng;
 		url += '&radius=' + (options.radius || 500);
 		url += '&types=' + (options.types || '');
