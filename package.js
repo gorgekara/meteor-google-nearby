@@ -6,13 +6,11 @@ Package.describe({
   documentation: 'README.md'
 });
 
-Package.onUse(function(api) {
+Package.onUse(function (api) {
   api.versionsFrom('1.0.4.1');
-  api.use([
-    'http'
-  ]);
-  api.addFiles('google_nearby.js');
-  api.export('nearby', 'client');
+  api.use('http', 'server');
+  api.addFiles('google_nearby.js', 'server');
+  api.export('nearby', 'server');
 });
 
 Package.onTest(function(api) {
