@@ -1,5 +1,5 @@
 # About
-Nearby users [Google Places API](https://developers.google.com/maps/documentation/javascript/places) to retreive nearby locations.
+Nearby uses [Google Places API](https://developers.google.com/maps/documentation/javascript/places) to retreive nearby locations.
 
 # Installation
 ```
@@ -24,4 +24,16 @@ options = {
 };
 
 places = nearby.getPlaces(options);
+```
+
+Get details for single place
+
+```
+// Make sure you have set api key first
+options = {
+  placeId: '123',
+  output: 'json' // or xml
+};
+
+placeDetails = nearby.getPlaceDetails(options);
 ```
