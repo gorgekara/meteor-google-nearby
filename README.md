@@ -49,7 +49,7 @@ options = {
   offset: 3,
   language: 'fr',
   types: 'food',
-  components: 'country:fr'
+  components: 'country:fr',
   output: 'json' // or xml
 };
 
