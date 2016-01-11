@@ -1,6 +1,6 @@
 Package.describe({
   name: 'gorgekara:google-nearby',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Calls Google Nearby API',
   git: 'https://github.com/gorgekara/meteor-google-nearby',
   documentation: 'README.md'
