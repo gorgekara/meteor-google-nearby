@@ -37,3 +37,21 @@ options = {
 
 placeDetails = nearby.getPlaceDetails(options);
 ```
+
+Search for places (autocomplete) - Check [Google Docs](https://developers.google.com/places/web-service/autocomplete?hl=en) for more info.
+
+```
+// Make sure you have set api key first
+options = {
+  input: 'New York',
+  radius: 10000,
+  location: 'lat,lng', // location coordinates
+  offset: 3,
+  language: 'fr',
+  types: 'food',
+  components: 'country:fr'
+  output: 'json' // or xml
+};
+
+searchData = nearby.search(options);
+```
