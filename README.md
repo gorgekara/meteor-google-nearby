@@ -8,16 +8,23 @@ meteor add gorgekara:google-nearby
 
 # Usage (on server only)
 
-```
-// Have to set your Google API key first
-// Also make sure you have the correct API enabled (Google Places API Web Service) in the Google Developers Console
-nearby.setKey('AIzaSyCNI3V4xImkA1Kzi89qNvHWJ7qUW6aHVn0');
+You'll have to set your Google API key first. Also make sure you have the correct API enabled (Google Places API Web Service) in the Google Developers Console
 
+```
+nearby.setKey('AIzaSyCNI3V4xImkA1Kzi89qNvHWJ7qUW6aHVn0');
+```
+
+To get the nearby places you can use ```getPlaces```. For more information on the options that can be sent check out the [Google Docs](https://developers.google.com/places/web-service/search?hl=en).
+
+```
 options = {
-  lat: '123',
-  lng: '321',
+  keyword: 'cafe'
+  location: 'lat,lng',
   types: 'food|cafe',
   rankBy: 'distance',
+  language: 'fr',
+  minprice: 0,
+  maxprice: 100,
   radius: 100,
   sensor: false,
   output: 'json' // or xml
@@ -31,7 +38,7 @@ Get details for single place
 ```
 // Make sure you have set api key first
 options = {
-  placeId: '123',
+  placeid: '123',
   output: 'json' // or xml
 };
 
