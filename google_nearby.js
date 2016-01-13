@@ -38,7 +38,8 @@ Nearby.prototype.setKey = function (key) {
 Nearby.prototype.search = function (options) {
   var url = this.searchUrl + options.output,
       results,
-      searchResults;
+      searchResults,
+      content;
 
   if (!options) {
     return console.log(this.messages.noOptions);
@@ -57,8 +58,11 @@ Nearby.prototype.search = function (options) {
 
   try {
     results = HTTP.call('GET', url, { params: options });
-    if (results.content) {
-      searchResults = JSON.parse(results.content).predictions;
+    content = JSON.parse(results.content);
+    searchResults = content.predictions;
+
+    if (results.data.status === 'REQUEST_DENIED') {
+      searchResults = results.data;
     }
   } catch(e) {
     throw new Meteor.Error(500, e);

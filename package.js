@@ -14,7 +14,7 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('gorgekara:google-nearby');
+  api.use('tinytest', 'server');
+  api.use('gorgekara:google-nearby', 'server');
   api.addFiles('google_nearby.test.js');
 });
