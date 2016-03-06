@@ -11,7 +11,7 @@ meteor add gorgekara:google-nearby
 You'll have to set your Google API key first. Also make sure you have the correct API enabled (Google Places API Web Service) in the Google Developers Console
 
 ```
-nearby.setKey('AIzaSyCNI3V4xImkA1Kzi89qNvHWJ7qUW6aHVn0');
+nearby.setKey('API_KEY');
 ```
 
 To get the nearby places you can use ```getPlaces```. For more information on the options that can be sent check out the [Google Docs](https://developers.google.com/places/web-service/search?hl=en).
